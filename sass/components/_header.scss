@@ -1,0 +1,17 @@
+.header {
+  height: 80px;
+}
+
+.container.head {
+  height: 80px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #ececec;
+}
+
+// .header-navigate {
+//   @media screen and (min-width: 1200px) {
+//     display: flex;
+//     align-items: center;
+//   }
+// }

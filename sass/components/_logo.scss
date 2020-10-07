@@ -1,0 +1,14 @@
+.logo {
+  font-family: $secondary-font;
+  @include font(26px, 1.19, 700);
+  color: $accent-color;
+  text-decoration: none;
+}
+
+.logo--black {
+  color: $title-text-color;
+}
+
+.logo--white {
+  color: $white-color;
+}

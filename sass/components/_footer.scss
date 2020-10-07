@@ -1,0 +1,35 @@
+.footer {
+  background-color: $footer-background-color;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.tablet-contain {
+  @media screen and (min-width: 768px) {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-around;
+    margin-bottom: 60px;
+  }
+  @media screen and (max-width: 1199px) {
+    margin-bottom: 60px;
+  }
+
+  .footer-container {
+    text-align: center;
+
+    @media screen and (min-width: 1200px) {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-around;
+    }
+  }
+
+  .footer-contacts {
+    width: 232px;
+
+    @media screen and (max-width: 767px) {
+      margin-bottom: 60px;
+    }
+  }
+}

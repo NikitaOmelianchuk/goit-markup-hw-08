@@ -1,0 +1,92 @@
+.team {
+  background-color: $second-background-color;
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  @media screen and (min-width: 1200px) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+}
+
+.team__heading {
+  margin-bottom: 30px;
+  margin-top: 0px;
+  @include font(28px, 1.18, 700);
+  letter-spacing: 0.03em;
+  text-align: center;
+  color: $title-text-color;
+
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 50px;
+    @include font(36px, 1.17, 700);
+  }
+}
+
+.members-list {
+  padding-left: 0px;
+  margin: 0;
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -15px;
+  }
+}
+
+.members-list__item {
+  margin-bottom: 30px;
+  background-color: $white-color;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  @media screen and (min-width: 768px) {
+    width: calc((100% - 4 * 15px) / 2);
+    margin: 15px;
+  }
+
+  &:nth-last-child(-n + 2) {
+    @media screen and (min-width: 768px) {
+      margin-bottom: 0;
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: calc((100% - 120px) / 4);
+    margin: 15px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 0;
+  }
+}
+
+.members-list__image {
+  display: block;
+  border-radius: 0px;
+}
+
+.members-list__about {
+  padding: 30px 32px 24px 32px;
+}
+
+.members-list__name {
+  margin-bottom: 10px;
+  margin-top: 0px;
+  color: $title-text-color;
+  @include font(16px, 1.19, 700);
+  text-align: center;
+}
+
+.members-list__profession {
+  margin-top: 0px;
+  margin-bottom: 0px;
+
+  @include font(16px, 1.19);
+  text-align: center;
+}
