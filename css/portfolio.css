@@ -733,17 +733,12 @@ button {
 }
 
 .tablet-contain .footer-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   text-align: center;
   padding-top: 60px;
   padding-bottom: 60px;
-}
-
-@media screen and (min-width: 1200px) {
-  .tablet-contain .footer-container {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
 }
 
 .tablet-contain .footer-contacts {
