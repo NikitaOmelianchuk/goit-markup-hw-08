@@ -1,13 +1,11 @@
 .icons-container {
-  width: 206px;
-
   @media screen and (max-width: 767px) {
     margin-bottom: 60px;
   }
 
-  // @media screen and (min-width: 1200px) {
-  //   margin-left: 70px;
-  // }
+  @media screen and (min-width: 1200px) {
+    margin-left: 70px;
+  }
 }
 
 .icons-container__text {

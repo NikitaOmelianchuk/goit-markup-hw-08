@@ -8,6 +8,10 @@
   padding-left: 0px;
 }
 
+.social-icons__item:not(:last-child) {
+  margin-right: 10px;
+}
+
 .social-icons__link {
   display: inline-flex;
   justify-content: center;

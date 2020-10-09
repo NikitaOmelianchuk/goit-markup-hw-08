@@ -6,7 +6,6 @@ html {
 *::before,
 *::after {
   box-sizing: inherit;
-  outline: 2px solid tomato;
 }
 
 body {
@@ -18,6 +17,12 @@ body {
 a,
 button {
   cursor: pointer;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 .button {
@@ -33,9 +38,7 @@ button {
   background-color: $accent-color;
   color: $white-color;
   font-family: inherit;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1.9;
+  @include font(16px, 1.88, 700);
   letter-spacing: 0.06em;
 }
 

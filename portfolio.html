@@ -17,38 +17,71 @@
           <a href="./index.html" class="logo"
             ><span>Web</span><span class="logo--black">Studio</span></a
           >
-          <ul class="navigate-list list">
-            <li class="navigate-list__item">
-              <a href="./index.html" class="navigate-list__link">Студия</a>
-            </li>
-            <li class="navigate-list__item">
-              <a href="./portfolio.html" class="navigate-list__link current"
-                >Портфолио</a
-              >
-            </li>
-            <li class="navigate-list__item">
-              <a href="" class="navigate-list__link">Контакты</a>
-            </li>
-          </ul>
+          <button
+            type="button"
+            class="menu-button"
+            aria-expanded="false"
+            aria-controls="menu-container"
+            data-menu-button
+          >
+            <svg
+              class="menu-icon"
+              width="40px"
+              height="40px"
+              aria-label="Переключатель мобильного меню"
+            >
+              <use
+                href="./img/icon/sprite-burger.svg#icon-cross"
+                class="icon-cross"
+              ></use>
+              <use
+                href="./img/icon/sprite-burger.svg#icon-menu"
+                class="icon-menu"
+              ></use>
+            </svg>
+          </button>
+          <div class="menu-container" id="menu-container" data-menu>
+            <ul class="navigate-list list">
+              <li class="navigate-list__item">
+                <a href="./index.html" class="navigate-list__link">Студия</a>
+              </li>
+              <li class="navigate-list__item">
+                <a href="./portfolio.html" class="navigate-list__link current"
+                  >Портфолио</a
+                >
+              </li>
+              <li class="navigate-list__item">
+                <a href="" class="navigate-list__link">Контакты</a>
+              </li>
+            </ul>
+            <ul class="contacts-list list">
+              <li class="contacts-list__item">
+                <a
+                  href="mailto:info@devstudio.com"
+                  class="contacts-list__link link-top"
+                >
+                  <svg class="contacts-list__icon icon-mail">
+                    <use href="./img/icon/symbol-defs2.svg#icon-convert"></use>
+                  </svg>
+                  info@devstudio.com</a
+                >
+              </li>
+              <li class="contacts-list__item--right">
+                <a
+                  href="tel:+30961111111"
+                  class="contacts-list__link link-bottom"
+                >
+                  <svg class="contacts-list__icon icon-tel">
+                    <use
+                      href="./img/icon/symbol-defs2.svg#icon-smartphone"
+                    ></use>
+                  </svg>
+                  +38 096 111 11 11</a
+                >
+              </li>
+            </ul>
+          </div>
         </nav>
-        <ul class="contacts-list list">
-          <li class="contacts-list__item">
-            <a href="mailto:info@devstudio.com" class="contacts-list__link">
-              <svg class="contacts-list__icon" width="16px" height="16px">
-                <use href="./img/icon/symbol-defs2.svg#icon-convert"></use>
-              </svg>
-              info@devstudio.com</a
-            >
-          </li>
-          <li class="contacts-list__item--right">
-            <a href="tel:+30961111111" class="contacts-list__link">
-              <svg class="contacts-list__icon" width="16px" height="16px">
-                <use href="./img/icon/symbol-defs2.svg#icon-smartphone"></use>
-              </svg>
-              +38 096 111 11 11</a
-            >
-          </li>
-        </ul>
       </div>
     </header>
     <main>
@@ -75,7 +108,31 @@
             <li class="examples-list__item">
               <a class="examples-list__link" href="">
                 <div class="examples-cover">
-                  <img src="./img/tehno.jpg" alt="пример сайта" />
+                  <picture>
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./img/mobile/tehno.jpg   1x,
+                        ./img/mobile/tehno-2.jpg 2x
+                      "
+                    />
+                    <source
+                      media="(min-width: 1200)"
+                      srcset="./img/tehno.jpg 1x, ./img/tehno-2.jpg 2x"
+                    />
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./img/tablet/tehno.jpg   1x,
+                        ./img/tablet/tehno-2.jpg 2x
+                      "
+                    />
+                    <img
+                      class="members-list__image"
+                      src="./img/tablet/tehno.jpg 1x, ./img/tablet/tehno-2.jpg 2x"
+                      alt="сайт Технокряк"
+                    />
+                  </picture>
                   <div class="examples-cover__overlay">
                     <p class="examples-cover__text">
                       Технокряк это современная площадка распространения
@@ -94,7 +151,31 @@
             <li class="examples-list__item">
               <a class="examples-list__link" href="">
                 <div class="examples-cover">
-                  <img src="./img/poster.jpg" alt="пример сайта" />
+                  <picture>
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./img/mobile/poster.jpg   1x,
+                        ./img/mobile/poster-2.jpg 2x
+                      "
+                    />
+                    <source
+                      media="(min-width: 1200)"
+                      srcset="./img/poster.jpg 1x, ./img/poster-2.jpg 2x"
+                    />
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./img/tablet/poster.jpg   1x,
+                        ./img/tablet/poster-2.jpg 2x
+                      "
+                    />
+                    <img
+                      class="members-list__image"
+                      src="./img/tablet/poster.jpg 1x, ./img/tablet/poster-2.jpg 2x"
+                      alt="постер New Orlean vs Golden Star"
+                    />
+                  </picture>
                   <div class="examples-cover__overlay">
                     <p class="examples-cover__text">
                       Технокряк это современная площадка распространения
@@ -115,7 +196,31 @@
             <li class="examples-list__item">
               <a class="examples-list__link" href="">
                 <div class="examples-cover">
-                  <img src="./img/seafood.jpg" alt="пример сайта" />
+                  <picture>
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./img/mobile/seafood.jpg   1x,
+                        ./img/mobile/seafood-2.jpg 2x
+                      "
+                    />
+                    <source
+                      media="(min-width: 1200)"
+                      srcset="./img/seafood.jpg 1x, ./img/seafood-2.jpg 2x"
+                    />
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./img/tablet/seafood.jpg   1x,
+                        ./img/tablet/seafood-2.jpg 2x
+                      "
+                    />
+                    <img
+                      class="members-list__image"
+                      src="./img/tablet/seafood.jpg 1x, ./img/tablet/seafood-2.jpg 2x"
+                      alt="приложение seafood"
+                    />
+                  </picture>
                   <div class="examples-cover__overlay">
                     <p class="examples-cover__text">
                       Технокряк это современная площадка распространения
@@ -134,7 +239,31 @@
             <li class="examples-list__item">
               <a class="examples-list__link" href="">
                 <div class="examples-cover">
-                  <img src="./img/prime.jpg" alt="пример сайта" />
+                  <picture>
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./img/mobile/prime.jpg   1x,
+                        ./img/mobile/prime-2.jpg 2x
+                      "
+                    />
+                    <source
+                      media="(min-width: 1200)"
+                      srcset="./img/prime.jpg 1x, ./img/prime-2.jpg 2x"
+                    />
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./img/tablet/prime.jpg   1x,
+                        ./img/tablet/prime-2.jpg 2x
+                      "
+                    />
+                    <img
+                      class="members-list__image"
+                      src="./img/tablet/prime.jpg 1x, ./img/tablet/prime-2.jpg 2x"
+                      alt="маркет Prime"
+                    />
+                  </picture>
                   <div class="examples-cover__overlay">
                     <p class="examples-cover__text">
                       Технокряк это современная площадка распространения
@@ -153,7 +282,31 @@
             <li class="examples-list__item">
               <a class="examples-list__link" href="">
                 <div class="examples-cover">
-                  <img src="./img/boxes.jpg" alt="пример сайта" />
+                  <picture>
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./img/mobile/boxes.jpg   1x,
+                        ./img/mobile/boxes-2.jpg 2x
+                      "
+                    />
+                    <source
+                      media="(min-width: 1200)"
+                      srcset="./img/boxes.jpg 1x, ./img/boxes-2.jpg 2x"
+                    />
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./img/tablet/boxes.jpg   1x,
+                        ./img/tablet/boxes-2.jpg 2x
+                      "
+                    />
+                    <img
+                      class="members-list__image"
+                      src="./img/tablet/boxes.jpg 1x, ./img/tablet/boxes-2.jpg 2x"
+                      alt="приложение Boxes"
+                    />
+                  </picture>
                   <div class="examples-cover__overlay">
                     <p class="examples-cover__text">
                       Технокряк это современная площадка распространения
@@ -172,10 +325,34 @@
             <li class="examples-list__item">
               <a class="examples-list__link" href="">
                 <div class="examples-cover">
-                  <img
-                    src="./img/InspirationhasnoBorders.jpg"
-                    alt="пример сайта"
-                  />
+                  <picture>
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./img/mobile/InspirationhasnoBorders.jpg   1x,
+                        ./img/mobile/InspirationhasnoBorders-2.jpg 2x
+                      "
+                    />
+                    <source
+                      media="(min-width: 1200)"
+                      srcset="
+                        ./img/inspirationhasnoborders.jpg   1x,
+                        ./img/inspirationhasnoborders-2.jpg 2x
+                      "
+                    />
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./img/tablet/inspirationhasnoborders.jpg   1x,
+                        ./img/tablet/inspirationhasnoborders-2.jpg 2x
+                      "
+                    />
+                    <img
+                      class="members-list__image"
+                      src="./img/tablet/inspirationhasnoborders.jpg 1x, ./img/tablet/inspirationhasnoborders-2.jpg 2x"
+                      alt="сайт inspirationhasnoborders"
+                    />
+                  </picture>
                   <div class="examples-cover__overlay">
                     <p class="examples-cover__text">
                       Технокряк это современная площадка распространения
@@ -196,7 +373,34 @@
             <li class="examples-list__item">
               <a class="examples-list__link" href="">
                 <div class="examples-cover">
-                  <img src="./img/limitededition.jpg" alt="пример сайта" />
+                  <picture>
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./img/mobile/limitededition.jpg   1x,
+                        ./img/mobile/limitededition-2.jpg 2x
+                      "
+                    />
+                    <source
+                      media="(min-width: 1200)"
+                      srcset="
+                        ./img/limitededition.jpg   1x,
+                        ./img/limitededition-2.jpg 2x
+                      "
+                    />
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./img/tablet/limitededition.jpg   1x,
+                        ./img/tablet/limitededition-2.jpg 2x
+                      "
+                    />
+                    <img
+                      class="members-list__image"
+                      src="./img/tablet/limitededition.jpg 1x, ./img/tablet/limitededition-2.jpg 2x"
+                      alt="издание limitededition"
+                    />
+                  </picture>
                   <div class="examples-cover__overlay">
                     <p class="examples-cover__text">
                       Технокряк это современная площадка распространения
@@ -215,7 +419,31 @@
             <li class="examples-list__item">
               <a class="examples-list__link" href="">
                 <div class="examples-cover">
-                  <img src="./img/labeltag.jpg" alt="пример сайта" />
+                  <picture>
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./img/mobile/labeltag.jpg   1x,
+                        ./img/mobile/labeltag-2.jpg 2x
+                      "
+                    />
+                    <source
+                      media="(min-width: 1200)"
+                      srcset="./img/labeltag.jpg 1x, ./img/labeltag-2.jpg 2x"
+                    />
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./img/tablet/labeltag.jpg   1x,
+                        ./img/tablet/labeltag-2.jpg 2x
+                      "
+                    />
+                    <img
+                      class="members-list__image"
+                      src="./img/tablet/labeltag.jpg 1x, ./img/tablet/labeltagn-2.jpg 2x"
+                      alt="проект labeltag"
+                    />
+                  </picture>
                   <div class="examples-cover__overlay">
                     <p class="examples-cover__text">
                       Технокряк это современная площадка распространения
@@ -234,7 +462,34 @@
             <li class="examples-list__item">
               <a class="examples-list__link" href="">
                 <div class="examples-cover">
-                  <img src="./img/growingbussines.jpg" alt="пример сайта" />
+                  <picture>
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./img/mobile/growingbussines.jpg   1x,
+                        ./img/mobile/growingbussines-2.jpg 2x
+                      "
+                    />
+                    <source
+                      media="(min-width: 1200)"
+                      srcset="
+                        ./img/growingbussines.jpg   1x,
+                        ./img/growingbussines-2.jpg 2x
+                      "
+                    />
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./img/tablet/growingbussines.jpg   1x,
+                        ./img/tablet/growingbussines-2.jpg 2x
+                      "
+                    />
+                    <img
+                      class="members-list__image"
+                      src="./img/tablet/growingbussines.jpg 1x, ./img/tablet/growingbussines-2.jpg 2x"
+                      alt="приложение growingbussines"
+                    />
+                  </picture>
                   <div class="examples-cover__overlay">
                     <p class="examples-cover__text">
                       Технокряк это современная площадка распространения
@@ -256,54 +511,62 @@
     </main>
     <footer class="footer">
       <div class="footer-container container">
-        <div class="footer-contacts">
-          <a href="./index.html" class="logo">
-            <span>Web<span class="logo--white">Studio</span></span>
-          </a>
-          <address class="address">
-            <span class="address__name"
-              >г. Киев, пр-т Леси Украинки, 26<br
-            /></span>
-            <a class="address__link link--mail" href="mailto:info@example.com"
-              >info@example.com</a
-            >
-            <a class="address__link" href="tel:+380991111111"
-              >+38 099 111 11 11</a
-            >
-          </address>
-        </div>
-        <div class="icons-container">
-          <p class="icons-container__text">ПРИСОЕДИНЯЙТЕСЬ</p>
-          <ul class="footer-icons list">
-            <li class="footer-icons__item">
-              <a class="footer-icons__link" href="">
-                <svg width="20px" height="20px">
-                  <use href="./img/icon/symbol-defs2.svg#icon-instagram2"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="footer-icons__item">
-              <a class="footer-icons__link" href="">
-                <svg width="20px" height="20px">
-                  <use href="./img/icon/symbol-defs2.svg#icon-twitter2"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="footer-icons__item">
-              <a class="footer-icons__link" href="">
-                <svg width="20px" height="20px">
-                  <use href="./img/icon/symbol-defs2.svg#icon-facebook2"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="footer-icons__item">
-              <a class="footer-icons__link" href="">
-                <svg width="20px" height="20px">
-                  <use href="./img/icon/symbol-defs2.svg#icon-linkedin2"></use>
-                </svg>
-              </a>
-            </li>
-          </ul>
+        <div class="tablet-contain">
+          <div class="footer-contacts">
+            <a href="./index.html" class="logo">
+              <span>Web<span class="logo--white">Studio</span></span>
+            </a>
+            <address class="address">
+              <span class="address__name"
+                >г. Киев, пр-т Леси Украинки, 26<br
+              /></span>
+              <a class="address__link link--mail" href="mailto:info@example.com"
+                >info@example.com</a
+              >
+              <a class="address__link" href="tel:+380991111111"
+                >+38 099 111 11 11</a
+              >
+            </address>
+          </div>
+          <div class="icons-container">
+            <p class="icons-container__text">ПРИСОЕДИНЯЙТЕСЬ</p>
+            <ul class="footer-icons list">
+              <li class="footer-icons__item">
+                <a class="footer-icons__link" href="">
+                  <svg width="20px" height="20px">
+                    <use
+                      href="./img/icon/symbol-defs2.svg#icon-instagram2"
+                    ></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="footer-icons__item">
+                <a class="footer-icons__link" href="">
+                  <svg width="20px" height="20px">
+                    <use href="./img/icon/symbol-defs2.svg#icon-twitter2"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="footer-icons__item">
+                <a class="footer-icons__link" href="">
+                  <svg width="20px" height="20px">
+                    <use
+                      href="./img/icon/symbol-defs2.svg#icon-facebook2"
+                    ></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="footer-icons__item">
+                <a class="footer-icons__link" href="">
+                  <svg width="20px" height="20px">
+                    <use
+                      href="./img/icon/symbol-defs2.svg#icon-linkedin2"
+                    ></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
         <div class="form-area">
           <b class="form-area__text">Подпишитесь на рассылку</b>
@@ -325,5 +588,6 @@
         </div>
       </div>
     </footer>
+    <script src="js/menu.js"></script>
   </body>
 </html>

@@ -1,6 +1,4 @@
 .modal-form__field {
-  padding-left: 40px;
-  padding-right: 40px;
   margin-bottom: 28px;
   text-align: start;
 }
@@ -68,6 +66,10 @@
     @include font(12px, 1.17);
     letter-spacing: 0.01em;
     color: $placeholder-color;
+
+    @media screen and (min-width: 1200px) {
+      @include font(14px, 1.14);
+    }
   }
 }
 

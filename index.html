@@ -17,133 +17,170 @@
           <a href="./index.html" class="logo"
             ><span>Web</span><span class="logo--black">Studio</span></a
           >
-          <ul class="navigate-list list">
-            <li class="navigate-list__item">
-              <a href="" class="navigate-list__link current">Студия</a>
-            </li>
-            <li class="navigate-list__item">
-              <a href="./portfolio.html" class="navigate-list__link"
-                >Портфолио</a
-              >
-            </li>
-            <li class="navigate-list__item">
-              <a href="" class="navigate-list__link">Контакты</a>
-            </li>
-          </ul>
+          <button
+            type="button"
+            class="menu-button"
+            aria-expanded="false"
+            aria-controls="menu-container"
+            data-menu-button
+          >
+            <svg
+              class="menu-icon"
+              width="40px"
+              height="40px"
+              aria-label="Переключатель мобильного меню"
+            >
+              <use
+                href="./img/icon/sprite-burger.svg#icon-cross"
+                class="icon-cross"
+              ></use>
+              <use
+                href="./img/icon/sprite-burger.svg#icon-menu"
+                class="icon-menu"
+              ></use>
+            </svg>
+          </button>
+          <div class="menu-container" id="menu-container" data-menu>
+            <ul class="navigate-list list">
+              <li class="navigate-list__item">
+                <a href="./index.html" class="navigate-list__link current"
+                  >Студия</a
+                >
+              </li>
+              <li class="navigate-list__item">
+                <a href="./portfolio.html" class="navigate-list__link"
+                  >Портфолио</a
+                >
+              </li>
+              <li class="navigate-list__item">
+                <a href="" class="navigate-list__link">Контакты</a>
+              </li>
+            </ul>
+            <ul class="contacts-list list">
+              <li class="contacts-list__item">
+                <a
+                  href="mailto:info@devstudio.com"
+                  class="contacts-list__link link-top"
+                >
+                  <svg class="contacts-list__icon icon-mail">
+                    <use href="./img/icon/symbol-defs2.svg#icon-convert"></use>
+                  </svg>
+                  info@devstudio.com</a
+                >
+              </li>
+              <li class="contacts-list__item--right">
+                <a
+                  href="tel:+30961111111"
+                  class="contacts-list__link link-bottom"
+                >
+                  <svg class="contacts-list__icon icon-tel">
+                    <use
+                      href="./img/icon/symbol-defs2.svg#icon-smartphone"
+                    ></use>
+                  </svg>
+                  +38 096 111 11 11</a
+                >
+              </li>
+            </ul>
+          </div>
         </nav>
-        <ul class="contacts-list list">
-          <li class="contacts-list__item">
-            <a href="mailto:info@devstudio.com" class="contacts-list__link">
-              <svg class="contacts-list__icon" width="16px" height="16px">
-                <use href="./img/icon/symbol-defs2.svg#icon-convert"></use>
-              </svg>
-              info@devstudio.com</a
-            >
-          </li>
-          <li class="contacts-list__item--right">
-            <a href="tel:+30961111111" class="contacts-list__link">
-              <svg class="contacts-list__icon" width="16px" height="16px">
-                <use href="./img/icon/symbol-defs2.svg#icon-smartphone"></use>
-              </svg>
-              +38 096 111 11 11</a
-            >
-          </li>
-        </ul>
       </div>
     </header>
     <main>
       <section class="hero">
-        <h1 class="hero__title">
-          Эффективные решения<br />
-          для вашего бизнесса
-        </h1>
-        <button type="button" class="button hero__button" data-modal-open>
-          Заказать услугу
-        </button>
-        <div class="backdrop is-hidden" data-modal>
-          <div class="modal">
-            <button class="modal-button" data-modal-close>
-              <svg class="modal-button__icon" width="11px" height="11px">
-                <use href="./img/icon/sprite-vector2.svg#icon-vector"></use>
-              </svg>
-            </button>
-            <p class="modal__text">Оставьте свои данные, мы вам перезвоним</p>
-            <form class="modal-form" autocomplete="off">
-              <div class="modal-form__field">
-                <label class="modal-form__label">
-                  <span class="modal-form__name">Имя</span>
-                  <input
-                    type="text"
-                    class="modal-form__input"
-                    name="client-name"
-                  />
-                  <svg class="modal-form__icon" width="18px" height="18px">
-                    <use
-                      href="./img/icon/sprite-form2.svg#icon-person-black-18dp-1"
-                    ></use>
-                  </svg>
-                </label>
-              </div>
-              <div class="modal-form__field">
-                <label class="modal-form__label">
-                  <span class="modal-form__name">Телефон</span>
-                  <input
-                    type="tel"
-                    class="modal-form__input"
-                    name="client-tel"
-                  />
-                  <svg class="modal-form__icon" width="18px" height="18px">
-                    <use
-                      href="./img/icon/sprite-form2.svg#icon-phone-black-18dp-1"
-                    ></use>
-                  </svg>
-                </label>
-              </div>
-              <div class="modal-form__field">
-                <label class="modal-form__label">
-                  <span class="modal-form__name">Почта</span>
-                  <input
-                    type="email"
-                    class="modal-form__input"
-                    name="client-mail"
-                  />
-                  <svg class="modal-form__icon" width="18px" height="18px">
-                    <use
-                      href="./img/icon/sprite-form2.svg#icon-email-black-18dp-1"
-                    ></use>
-                  </svg>
-                </label>
-              </div>
-              <div class="modal-form__field">
-                <label class="modal-form__label">
-                  <span class="modal-form__name">Комментарий</span>
-                  <textarea
-                    class="modal-form__textarea"
-                    name="client-comment"
-                    rows="10"
-                    placeholder="Введите текст"
-                  ></textarea>
-                </label>
-              </div>
-              <div class="modal-form__checkbox">
-                <label class="modal-form__checkbox-label">
-                  <input
-                    class="modal-form__checkbox-input"
-                    type="checkbox"
-                    name="license"
-                    value=""
-                    id="license"
-                  />
-                  <span class="modal-form__checkbox-text"
-                    >Соглашаюсь с рассылкой и принимаю
-                    <a href="" class="modal-form__checkbox-link">
-                      Условия договора</a
-                    ></span
-                  >
-                </label>
-              </div>
-              <button class="button" type="submit">Отправить</button>
-            </form>
+        <div class="hero-container">
+          <h1 class="hero__title">
+            Эффективные решения<br />
+            для вашего бизнесса
+          </h1>
+          <button type="button" class="button hero__button" data-modal-open>
+            Заказать услугу
+          </button>
+          <div class="backdrop is-hidden" data-modal>
+            <div class="modal">
+              <button class="modal-button" data-modal-close>
+                <svg class="modal-button__icon" width="11px" height="11px">
+                  <use href="./img/icon/sprite-vector2.svg#icon-vector"></use>
+                </svg>
+              </button>
+              <p class="modal__text">Оставьте свои данные, мы вам перезвоним</p>
+              <form class="modal-form" autocomplete="off">
+                <div class="modal-form__field">
+                  <label class="modal-form__label">
+                    <span class="modal-form__name">Имя</span>
+                    <input
+                      type="text"
+                      class="modal-form__input"
+                      name="client-name"
+                    />
+                    <svg class="modal-form__icon" width="18px" height="18px">
+                      <use
+                        href="./img/icon/sprite-form2.svg#icon-person-black-18dp-1"
+                      ></use>
+                    </svg>
+                  </label>
+                </div>
+                <div class="modal-form__field">
+                  <label class="modal-form__label">
+                    <span class="modal-form__name">Телефон</span>
+                    <input
+                      type="tel"
+                      class="modal-form__input"
+                      name="client-tel"
+                    />
+                    <svg class="modal-form__icon" width="18px" height="18px">
+                      <use
+                        href="./img/icon/sprite-form2.svg#icon-phone-black-18dp-1"
+                      ></use>
+                    </svg>
+                  </label>
+                </div>
+                <div class="modal-form__field">
+                  <label class="modal-form__label">
+                    <span class="modal-form__name">Почта</span>
+                    <input
+                      type="email"
+                      class="modal-form__input"
+                      name="client-mail"
+                    />
+                    <svg class="modal-form__icon" width="18px" height="18px">
+                      <use
+                        href="./img/icon/sprite-form2.svg#icon-email-black-18dp-1"
+                      ></use>
+                    </svg>
+                  </label>
+                </div>
+                <div class="modal-form__field">
+                  <label class="modal-form__label">
+                    <span class="modal-form__name">Комментарий</span>
+                    <textarea
+                      class="modal-form__textarea"
+                      name="client-comment"
+                      rows="10"
+                      placeholder="Введите текст"
+                    ></textarea>
+                  </label>
+                </div>
+                <div class="modal-form__checkbox">
+                  <label class="modal-form__checkbox-label">
+                    <input
+                      class="modal-form__checkbox-input"
+                      type="checkbox"
+                      name="license"
+                      value=""
+                      id="license"
+                    />
+                    <span class="modal-form__checkbox-text"
+                      >Соглашаюсь с рассылкой и принимаю
+                      <a href="" class="modal-form__checkbox-link">
+                        Условия договора</a
+                      ></span
+                    >
+                  </label>
+                </div>
+                <button class="button" type="submit">Отправить</button>
+              </form>
+            </div>
           </div>
         </div>
       </section>
@@ -220,10 +257,10 @@
             <li class="works-list__item">
               <img
                 class="works-list__image"
+                srcset="./img/box2.jpg 1x, ./img/box2-2.jpg 2x"
                 src="./img/box2.jpg"
                 alt="фото2"
                 width="370"
-                height="294"
               />
               <div class="works-list__overlay">
                 <p class="works-list__text">МОБИЛЬНЫЕ ПРИЛОЖЕНИЯ</p>
@@ -232,10 +269,10 @@
             <li class="works-list__item">
               <img
                 class="works-list__image"
+                srcset="./img/box3.jpg 1x, ./img/box3-2.jpg 2x"
                 src="./img/box3.jpg"
                 alt="фото3"
                 width="370"
-                height="294"
               />
               <div class="works-list__overlay">
                 <p class="works-list__text">ДИЗАЙНЕРСКИЕ РЕШЕНИЯ</p>
@@ -249,17 +286,36 @@
           <h2 class="team__heading">Наша команда</h2>
           <ul class="members-list list">
             <li class="members-list__item">
-              <img
-                class="members-list__image"
-                src="./img/demjanenko.jpg"
-                alt="foto Demjanenko"
-                width="270"
-              />
+              <picture>
+                <source
+                  media="(max-width: 767px)"
+                  srcset="
+                    ./img/mobile/demjanenko.jpg   1x,
+                    ./img/mobile/demjanenko-2.jpg 2x
+                  "
+                />
+                <source
+                  media="(min-width: 1200)"
+                  srcset="./img/demjanenko.jpg 1x, ./img/demjanenko-2.jpg 2x"
+                />
+                <source
+                  media="(min-width: 768px)"
+                  srcset="
+                    ./img/tablet/demjanenko.jpg   1x,
+                    ./img/tablet/demjanenko-2.jpg 2x
+                  "
+                />
+                <img
+                  class="members-list__image"
+                  src="./img/tablet/demjanenko.jpg 1x, ./img/tablet/demjanenko-2.jpg 2x"
+                  alt="foto Demjanenko"
+                />
+              </picture>
               <div class="members-list__about">
                 <h3 class="members-list__name">Игорь Демьяненко</h3>
                 <p class="members-list__profession">Product Designer</p>
                 <ul class="social-icons list">
-                  <li>
+                  <li class="social-icons__item">
                     <a
                       href=""
                       class="social-icons__link"
@@ -276,7 +332,7 @@
                       </svg>
                     </a>
                   </li>
-                  <li>
+                  <li class="social-icons__item">
                     <a
                       href=""
                       class="social-icons__link"
@@ -293,7 +349,7 @@
                       </svg>
                     </a>
                   </li>
-                  <li>
+                  <li class="social-icons__item">
                     <a
                       href=""
                       class="social-icons__link"
@@ -310,7 +366,7 @@
                       </svg>
                     </a>
                   </li>
-                  <li>
+                  <li class="social-icons__item">
                     <a
                       href=""
                       class="social-icons__link"
@@ -331,17 +387,36 @@
               </div>
             </li>
             <li class="members-list__item">
-              <img
-                class="members-list__image"
-                src="./img/repina.jpg"
-                alt="foto Repina"
-                width="270"
-              />
+              <picture>
+                <source
+                  media="(max-width: 767px)"
+                  srcset="
+                    ./img/mobile/repina.jpg   1x,
+                    ./img/mobile/repina-2.jpg 2x
+                  "
+                />
+                <source
+                  media="(min-width: 1200)"
+                  srcset="./img/repina.jpg 1x, ./img/repina-2.jpg 2x"
+                />
+                <source
+                  media="(min-width: 768px)"
+                  srcset="
+                    ./img/tablet/repina.jpg   1x,
+                    ./img/tablet/repina-2.jpg 2x
+                  "
+                />
+                <img
+                  class="members-list__image"
+                  src="./img/tablet/repina.jpg 1x, ./img/tablet/repina-2.jpg 2x"
+                  alt="foto Repina"
+                />
+              </picture>
               <div class="members-list__about">
                 <h3 class="members-list__name">Ольга Репина</h3>
                 <p class="members-list__profession">Frontend Developer</p>
                 <ul class="social-icons list">
-                  <li>
+                  <li class="social-icons__item">
                     <a
                       href=""
                       class="social-icons__link"
@@ -358,7 +433,7 @@
                       </svg>
                     </a>
                   </li>
-                  <li>
+                  <li class="social-icons__item">
                     <a
                       href=""
                       class="social-icons__link"
@@ -375,7 +450,7 @@
                       </svg>
                     </a>
                   </li>
-                  <li>
+                  <li class="social-icons__item">
                     <a
                       href=""
                       class="social-icons__link"
@@ -392,7 +467,7 @@
                       </svg>
                     </a>
                   </li>
-                  <li>
+                  <li class="social-icons__item">
                     <a
                       href=""
                       class="social-icons__link"
@@ -413,17 +488,36 @@
               </div>
             </li>
             <li class="members-list__item">
-              <img
-                class="members-list__image"
-                src="./img/tarasov.jpg"
-                alt="foto Ermakov"
-                width="270"
-              />
+              <picture>
+                <source
+                  media="(max-width: 767px)"
+                  srcset="
+                    ./img/mobile/tarasov.jpg   1x,
+                    ./img/mobile/tarasov-2.jpg 2x
+                  "
+                />
+                <source
+                  media="(min-width: 1200)"
+                  srcset="./img/tarasov.jpg 1x, ./img/tarasov-2.jpg 2x"
+                />
+                <source
+                  media="(min-width: 768px)"
+                  srcset="
+                    ./img/tablet/tarasov.jpg   1x,
+                    ./img/tablet/tarasov-2.jpg 2x
+                  "
+                />
+                <img
+                  class="members-list__image"
+                  src="./img/tablet/tarasov.jpg 1x, ./img/tablet/tarasov-2.jpg 2x"
+                  alt="foto Tarasov"
+                />
+              </picture>
               <div class="members-list__about">
                 <h3 class="members-list__name">Николай Тарасов</h3>
                 <p class="members-list__profession">Marketing</p>
                 <ul class="social-icons list">
-                  <li>
+                  <li class="social-icons__item">
                     <a
                       href=""
                       class="social-icons__link"
@@ -440,7 +534,7 @@
                       </svg>
                     </a>
                   </li>
-                  <li>
+                  <li class="social-icons__item">
                     <a
                       href=""
                       class="social-icons__link"
@@ -457,7 +551,7 @@
                       </svg>
                     </a>
                   </li>
-                  <li>
+                  <li class="social-icons__item">
                     <a
                       href=""
                       class="social-icons__link"
@@ -474,7 +568,7 @@
                       </svg>
                     </a>
                   </li>
-                  <li>
+                  <li class="social-icons__item">
                     <a
                       href=""
                       class="social-icons__link"
@@ -495,17 +589,36 @@
               </div>
             </li>
             <li class="members-list__item">
-              <img
-                class="members-list__image"
-                src="./img/ermakov.jpg"
-                alt="foto Ermakov"
-                width="270"
-              />
+              <picture>
+                <source
+                  media="(max-width: 767px)"
+                  srcset="
+                    ./img/mobile/ermakov.jpg   1x,
+                    ./img/mobile/ermakov-2.jpg 2x
+                  "
+                />
+                <source
+                  media="(min-width: 1200)"
+                  srcset="./img/ermakov.jpg 1x, ./img/ermakov-2.jpg 2x"
+                />
+                <source
+                  media="(min-width: 768px)"
+                  srcset="
+                    ./img/tablet/ermakov.jpg   1x,
+                    ./img/tablet/ermakov-2.jpg 2x
+                  "
+                />
+                <img
+                  class="members-list__image"
+                  src="./img/tablet/ermakov.jpg 1x, ./img/tablet/ermakov-2.jpg 2x"
+                  alt="foto Tarasov"
+                />
+              </picture>
               <div class="members-list__about">
                 <h3 class="members-list__name">Михаил Ермаков</h3>
                 <p class="members-list__profession">UI Designer</p>
                 <ul class="social-icons list">
-                  <li>
+                  <li class="social-icons__item">
                     <a
                       href=""
                       class="social-icons__link"
@@ -522,7 +635,7 @@
                       </svg>
                     </a>
                   </li>
-                  <li>
+                  <li class="social-icons__item">
                     <a
                       href=""
                       class="social-icons__link"
@@ -539,7 +652,7 @@
                       </svg>
                     </a>
                   </li>
-                  <li>
+                  <li class="social-icons__item">
                     <a
                       href=""
                       class="social-icons__link"
@@ -556,7 +669,7 @@
                       </svg>
                     </a>
                   </li>
-                  <li>
+                  <li class="social-icons__item">
                     <a
                       href=""
                       class="social-icons__link"
@@ -732,6 +845,7 @@
         </div>
       </div>
     </footer>
+    <script src="js/menu.js"></script>
     <script src="./js/modal.js"></script>
   </body>
 </html>
