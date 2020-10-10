@@ -59,11 +59,14 @@
 }
 
 .advantage-list__title {
-  text-align: center;
   margin-top: 0;
   margin-bottom: 10px;
   @include font(14px, 1.14, 700);
+  letter-spacing: 0.03em;
   color: $title-text-color;
+  @media screen and (max-width: 767px) {
+    text-align: center;
+  }
 }
 
 .advantage-list__text {

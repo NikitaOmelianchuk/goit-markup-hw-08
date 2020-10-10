@@ -4,6 +4,10 @@
   }
 
   @media screen and (min-width: 1200px) {
+    width: 206px;
+  }
+
+  @media screen and (min-width: 1200px) {
     margin-left: 70px;
   }
 }
@@ -17,9 +21,8 @@
 
 .footer-icons {
   display: flex;
-  justify-content: center;
-  margin-top: 0px;
-  margin-bottom: 0px;
+  margin: 0;
+  padding: 0;
 }
 
 .footer-icons__item:not(:last-child) {

@@ -12,6 +12,7 @@
 }
 
 .clients__heading {
+  margin-top: 0px;
   margin-bottom: 30px;
   @include font(28px, 1.18, 700);
   color: $title-text-color;

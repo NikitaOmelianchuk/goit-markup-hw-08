@@ -74,21 +74,28 @@
 }
 
 .modal-form__checkbox {
-  padding-left: 52px;
-  padding-right: 51px;
   margin-bottom: 30px;
 }
 
 .modal-form__checkbox-label {
-  @include font(14px, 1.71);
+  @include font(12px, 1.14);
   letter-spacing: 0.03em;
   color: $main-text-color;
+
+  @media screen and (min-width: 1200px) {
+    @include font(14px, 1.71);
+  }
 }
 
 .modal-form__checkbox-input {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 .modal-form__checkbox-text:before {
